@@ -6,12 +6,12 @@ import { UsuarioModule } from './usuario/usuario.module';
 import { BarraNavegacaoComponent } from './shared/componentes/barra-navegacao/barra-navegacao.component';
 import { MenuLateralComponent } from './shared/componentes/barra-navegacao/menu-lateral/menu-lateral.component';
 
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ArquivoModule } from './Arquivo/arquivo.module';
-import { CombustivelFormComponent } from './combustivel/combustivel-form/combustivel-form.component';
-import {CombustivelModule} from './combustivel/combustivel.module';
+import { CombustivelModule } from './combustivel/combustivel.module';
 import { SearchComponent } from './shared/componentes/search/search.component';
 import { FilterPipe } from './shared/componentes/search/filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import { FilterPipe } from './shared/componentes/search/filter.pipe';
     UsuarioModule,
     AppRoutingModule,
     ArquivoModule,
-    CombustivelModule
+    CombustivelModule,
+    Ng2SearchPipeModule
 
   ],
   providers: [],

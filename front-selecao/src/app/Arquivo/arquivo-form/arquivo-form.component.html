@@ -5,10 +5,11 @@
     <div class="form-group">
       <input
         type="file"
-        formControlName="arquivo"
+        formControlName="file"
         class="form-control"
         placeholder="Nome"
-        autofocus>
+        autofocus
+        (change)="file = $event.target.files[0]">
     </div>
 
     <div class="form-group">

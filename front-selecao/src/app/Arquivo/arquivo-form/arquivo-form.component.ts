@@ -27,7 +27,7 @@ export class ArquivoFormComponent implements OnInit {
   ngOnInit(): void {
     this.arquivoForm = this.formBuilder.group({
       nomeArquivo: ['', Validators.required],
-      arquivo: ['', Validators.required]
+      file: ['', Validators.required]
     });
   }
 
@@ -37,6 +37,7 @@ export class ArquivoFormComponent implements OnInit {
    this.arquivoService.salvar(this.file, this.id, nomeArquivo)
      .subscribe((event: HttpEvent<object>) => {
        if (event.type === HttpEventType.Response) {
+         alert("Upload concluido")
            this.arquivoForm.reset('nomeArquivo');
        } else if (event.type === HttpEventType.UploadProgress) {
          const percentDone = Math.round((event.loaded * 100) / event.total);
